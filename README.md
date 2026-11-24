@@ -152,3 +152,34 @@ Both the frontend and the API are deployed, at $0/month on free tiers.
 - No password reset or rate limiting yet
 - Possible starvation of normal requests under continuous urgent traffic
 - No Trie, graph or AI components
+## Project walkthrough
+
+The project can be understood through these main parts:
+
+1. **Frontend (`src/`):** Contains the React and TypeScript pages for student profiles, directory, requirements and collaboration requests.
+
+2. **Backend (`server/`):** Handles API requests, authentication and communication with the database.
+
+3. **DSA Engine (`engine/`):** Contains the C++17 implementation of student searching, recommendations and request scheduling.
+
+4. **Database:** Stores student information, collaboration requirements and requests using PostgreSQL when deployed.
+
+### Main DSA implementation
+
+- `vector<Student>` stores student records.
+- `unordered_map` provides indexing for student IDs and skills.
+- `queue<Request>` maintains normal requests in FIFO order.
+- `priority_queue<Request>` handles high-priority requests.
+
+### Evaluation demonstration
+
+During the project demonstration, the following sections can be shown:
+
+- Student registration and profile management.
+- Student directory and skill-based search.
+- Student recommendations.
+- Creation of collaboration requirements.
+- Incoming and outgoing collaboration requests.
+- C++ engine implementation and database structure.
+
+Sample preview data is labelled in the interface. Live operations should be demonstrated after confirming the backend connection.
